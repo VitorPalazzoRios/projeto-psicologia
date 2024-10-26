@@ -1,0 +1,12 @@
+.button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000; /* garante que os botões fiquem acima de outros elementos */
+}
+
+.button-container .btn {
+  margin-bottom: 10px; /* Espaçamento entre os botões */
+}

@@ -30,12 +30,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.scss"
+              ],
+            "scripts": [
+          "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+              {
+                "replace": "src/environments/environment.ts",
+                "with":    "src/environments/environment.prod.ts"
+              }
+            ],
               "budgets": [
                 {
                   "type": "initial",
@@ -63,6 +72,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+          "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "projeto-psicologia:build:production"

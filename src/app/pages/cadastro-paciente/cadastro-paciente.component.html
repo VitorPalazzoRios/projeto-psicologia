@@ -1,0 +1,159 @@
+<app-icone-principal-nome></app-icone-principal-nome>
+<div class="container CamposCadastros">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Ficha de cadastro:</h3>
+        </div>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <div class="row">
+        <div class="col-md-12">
+            <label for="nomeCompleto">Nome completo:</label>
+            <input type="text" id="nomeCompleto" class="camposInput" name="nome" formControlName="nome">
+        </div>
+    </div>
+    
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Pessoa:</label>
+        <select class="form-select" aria-label="Default select example">
+            <option value="1">Fisica</option>
+            <option value="2">Juridica</option>
+          </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CPF:</label>
+        <input type="text" class="camposInput" name="cpf" formControlName="cpf">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">RG:</label>
+        <input type="text" class="camposInput" name="rg" formControlName="rg">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">E-mail:</label>
+        <input type="text" class="camposInput" name="email" formControlName="email">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Endereço:</label>
+        <input type="text" class="camposInput" name="endereco" formControlName="endereco">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Cidade:</label>
+        <input type="text" class="camposInput" name="cidade" formControlName="cidade">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Bairro:</label>
+        <input type="text" class="camposInput" name="bairro" formControlName="bairro">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Estado:</label>
+        <select id="uf" name="uf" formControlName="uf" class="form-select" aria-label="Default select example">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CEP:</label>
+        <input type="text" class="camposInput" name="cep" formControlName="cep">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Complemento:</label>
+        <input type="text" class="camposInput" name="complemento" formControlName="complemento">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Data de nascimento:</label>
+        <input type="date" class="camposInput" name="data_nascimento" formControlName="data_nascimento">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Celular:</label>
+        <input type="text" class="camposInput" name="celular" formControlName="celular">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Telefone:</label>
+        <input type="text" class="camposInput" name="telefone" formControlName="telefone">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Profissão:</label>
+        <input type="text" class="camposInput" name="profissao" formControlName="profissao">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Observações:</label>
+        <textarea id="story" name="story" rows="5" cols="33" class="textAreaObservacao" name="observacao" formControlName="observacao">
+         
+            </textarea>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Login:</label>
+        <input type="text" class="camposInput" name="login" formControlName="login">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Senha:</label>
+        <input type="text" class="camposInput" name="senha" formControlName="senha">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-light">Salvar</button>
+    </div>
+</div>
+</form>
+</div>

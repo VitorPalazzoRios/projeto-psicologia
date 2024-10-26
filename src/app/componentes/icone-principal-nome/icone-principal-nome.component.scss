@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+$JetBrains: "JetBrains Mono", monospace;
+
+.fontePsicoTech{
+    font-family: $JetBrains;
+    color: white;
+    font-size: 64px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.fundoCinza{
+    background-color: #D9D9D9;
+    width: 216px;
+    height: 166px;
+    border-radius: 90px;
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.imagemPsicologo{
+    width: 173px;
+    height: 174px;
+    margin-left: 20px;
+}

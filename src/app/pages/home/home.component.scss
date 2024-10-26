@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+$JetBrains: "JetBrains Mono", monospace;
+
+.psicoTech{
+    font-family: $JetBrains;
+    color: white;
+    font-size: 64px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+app-icone-principal,.linhaLogin, .psicoTech {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .textoIntroducao{
+    font-family: $JetBrains;
+    color: white;
+    font-size: 64px;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+  .textoIntroducao2{
+    font-family: $JetBrains;
+    color: white;
+    font-size: 64px;
+    margin-left: 20px;
+  
+  }
+
+  .botaoLogin{
+    background-color: #D9D9D9;
+    width: 236px;
+    height: 67px;
+    border-radius: 90px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+}
+.fontBotao{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.linhaLogin {
+    float: right;
+    margin-right: 90px;
+    margin-top: 40px;
+  }
+  h4{
+    font-family: $JetBrains;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .linhaFinal{
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+  .paciente{
+    margin-left: 40px;
+  }
+  .profissional{
+    margin-left: 20px;
+  }
+  .jaTenhoCadastro{
+    margin-left: 10px;
+  }
