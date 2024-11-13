@@ -6,6 +6,7 @@ import { CadastroPacienteComponent } from './pages/cadastro-paciente/cadastro-pa
 import { ListagemPacientesComponent } from './pages/listagem-pacientes/listagem-pacientes.component';
 import { PerfilDetalheComponent } from './pages/perfil-detalhe/perfil-detalhe.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ListagemTemasComponent } from './pages/listagem-temas/listagem-temas.component';
 
 const routes: Routes = [
 {
@@ -23,6 +24,10 @@ const routes: Routes = [
 { 
   path: 'listagem-pacientes', 
   component: ListagemPacientesComponent 
+},
+{ 
+  path: 'listagem-temas', 
+  component: ListagemTemasComponent 
 },
 { 
   path: 'perfil-detalhe', 

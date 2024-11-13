@@ -7,11 +7,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./icone-principal.component.scss']
 })
 export class IconePrincipalComponent {
+  parametro: boolean = false;
 
-    constructor(private  router: Router){
+  constructor(private  router: Router){
 
+  }
+
+  isAuthenticated(): boolean 
+  { 
+    return !!localStorage.getItem('token');
+  }
+
+  irParaHome(){
+  
+    this.parametro = this.isAuthenticated();
+
+    if(this.parametro == true){
+      this.router.navigate(['/listagem-pacientes']);
     }
-    irParaHome(){
-      this.router.navigate(['/']);
-    }
+
+    this.router.navigate(['/']);
+
+}
 }

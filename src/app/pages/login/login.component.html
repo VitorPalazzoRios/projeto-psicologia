@@ -1,13 +1,22 @@
 <app-icone-principal-nome></app-icone-principal-nome>
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div class="container CamposCadastros">
     <div>
-      <label for="username">Username</label>
-      <input type="text" id="username" [(ngModel)]="loginData.username" name="username" required>
+      <div class="row usuario">
+      <label for="username">Usuário:</label>
+      <input type="text" class="camposInput" id="username" [(ngModel)]="loginData.username" name="username" required>
     </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" [(ngModel)]="loginData.password" name="password" required>
+    
+      <div class="col-md-12">
+      <label for="password">Senha:</label>
     </div>
-    <button type="submit">Login</button>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+      <input type="password" class="camposInput" id="password" [(ngModel)]="loginData.password" name="password" required>
+    </div>
+    </div>
+    <button type="submit"  class="btn btn-light">Entrar</button>
+  </div>
   </form>
   

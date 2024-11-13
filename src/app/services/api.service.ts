@@ -16,13 +16,15 @@ export class ApiService {
     this.apiUrl = environment.apiUrl;
   }
 
-
   public httpListPacientes(login: string) {
     return this.http.get(
       `${this.apiUrl}api/usuarios/${login}`, {}
     );
   }
   
+  public CasdatroUsuario(form: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}public/cadastro`, form);
+  }
 
 
 

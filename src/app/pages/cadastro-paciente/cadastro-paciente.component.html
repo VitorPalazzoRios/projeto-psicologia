@@ -6,6 +6,7 @@
         </div>
     </div>
     <form [formGroup]="profileForm" (ngSubmit)="submit()">
+        <div formGroupName="usuario">
     <div class="row">
         <div class="col-md-12">
             <label for="nomeCompleto">Nome completo:</label>
@@ -154,6 +155,7 @@
     <div class="col-md-12">
         <button type="submit" class="btn btn-light">Salvar</button>
     </div>
+</div>
 </div>
 </form>
 </div>

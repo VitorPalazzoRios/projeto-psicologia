@@ -19,6 +19,9 @@ import { PerfilDetalheComponent } from './pages/perfil-detalhe/perfil-detalhe.co
 import { IconePrincipalNomeComponent } from './componentes/icone-principal-nome/icone-principal-nome.component';
 import { EditarPerfilComponent } from './componentes/editar-perfil/editar-perfil.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SairComponent } from './componentes/sair/sair.component';
+import { TemasComponent } from './componentes/temas/temas.component';
+import { ListagemTemasComponent } from './pages/listagem-temas/listagem-temas.component';
 
 
 @NgModule({
@@ -34,6 +37,9 @@ import { LoginComponent } from './pages/login/login.component';
     IconePrincipalNomeComponent,
     EditarPerfilComponent,
     LoginComponent,
+    SairComponent,
+    TemasComponent,
+    ListagemTemasComponent,
   ],
   imports: [
     BrowserModule,
