@@ -77,10 +77,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "projeto-psicologia:build:production"
+              "buildTarget": "projeto-psicologia:build:production"
             },
             "development": {
-              "browserTarget": "projeto-psicologia:build:development"
+              "buildTarget": "projeto-psicologia:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projeto-psicologia:build"
+            "buildTarget": "projeto-psicologia:build"
           }
         },
         "test": {
