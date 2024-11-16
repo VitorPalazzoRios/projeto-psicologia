@@ -130,6 +130,17 @@
         <input type="text" class="camposInput" name="profissao" formControlName="profissao">
     </div>
 </div>
+@if(parametro){
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Status:</label>
+        <select class="camposSelect" name="status" formControlName="status">
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+          </select>
+    </div>
+</div>
+}
 <div class="row">
     <div class="col-md-12">
         <label for="nomeCompleto">Observações:</label>

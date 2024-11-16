@@ -11,8 +11,9 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class CadastroPacienteComponent implements OnInit{
 
-  parametro: string = '';
+  public parametro: string = '';
   usuario = {};
+  mostrarStatus: boolean = true;
 
   constructor(
     private router     : Router,
@@ -23,6 +24,9 @@ export class CadastroPacienteComponent implements OnInit{
 
   ngOnInit() {
     this.parametro = this.route.snapshot.paramMap.get('parametro')!;
+     if(this.parametro === 'editar'){
+        this.mostrarStatus == false;
+     }
   }
   public profileForm = new FormGroup({
       usuario: new FormGroup({
@@ -42,6 +46,7 @@ export class CadastroPacienteComponent implements OnInit{
       celular:         new FormControl(''),
       profissao:       new FormControl(''),
       caminho_foto:    new FormControl(''),
+      status:          new FormControl(''),
       observacao:      new FormControl(''),
       login:           new FormControl(''),
       senha:           new FormControl(''),
@@ -52,16 +57,23 @@ export class CadastroPacienteComponent implements OnInit{
 
 
   public submit(){
-    debugger;
-    this.apiService.CasdatroUsuario(this.profileForm.value).subscribe( 
-      
-      response => { 
-        console.log('Formulário enviado com sucesso!', response); 
 
-      }, 
-      error => { 
-        console.error('Erro ao enviar o formulário', error); 
-        console.log(error); 
+    if(this.parametro === 'criar'){
+      this.profileForm.patchValue({
+        usuario: {
+          status: 'ativo' 
+        }
+      });
+    }
+
+    this.apiService.CasdatroUsuario(this.profileForm.value).subscribe( 
+      {
+        next: (v) => 
+        this.router.navigate(['/cadastro-paciente', 'criar'])
+        ,
+        error: (e) => console.error(e)
+        ,
+        complete: () => console.info('complete') 
       }
     );
   }

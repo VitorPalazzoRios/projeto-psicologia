@@ -17,7 +17,7 @@ export class EditarPerfilComponent {
   }
 
   EditarPaciente(){
-    this.router.navigate(['/cadastro-paciente', 'paciente']);
+    this.router.navigate(['/cadastro-paciente', 'editar']);
   }
 
 

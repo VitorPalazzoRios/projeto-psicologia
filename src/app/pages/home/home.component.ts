@@ -11,7 +11,7 @@ export class HomeComponent {
   constructor(private  router: Router) {}
 
   navegarComParametro() {
-    this.router.navigate(['/cadastro-paciente', 'paciente']);
+    this.router.navigate(['/cadastro-paciente', 'criar']);
   }
   irParaLogin(){
     this.router.navigate(['/login']);
