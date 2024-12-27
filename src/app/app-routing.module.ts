@@ -18,11 +18,11 @@ const routes: Routes = [
   component : SobreComponent 
 },
 { 
-  path: 'cadastro-paciente/:parametro', 
+  path: 'cadastro-paciente/:parametro/:tipo/:id', 
   component: CadastroPacienteComponent 
 },
 { 
-  path: 'listagem-pacientes', 
+  path: 'listagem-pacientes/:tipo', 
   component: ListagemPacientesComponent 
 },
 { 
@@ -30,7 +30,7 @@ const routes: Routes = [
   component: ListagemTemasComponent 
 },
 { 
-  path: 'perfil-detalhe', 
+  path: 'perfil-detalhe/:id', 
   component: PerfilDetalheComponent 
 },
 { 

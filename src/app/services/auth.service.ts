@@ -19,6 +19,8 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}public/auth`, { username, password }).pipe(
         map(response => {
             localStorage.setItem('token', response.token);
+            localStorage.setItem('tipo', response.tipo);
+            localStorage.setItem('id', response.id);
             return response;
         })
     );

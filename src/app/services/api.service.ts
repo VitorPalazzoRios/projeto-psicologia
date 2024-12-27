@@ -16,16 +16,27 @@ export class ApiService {
     this.apiUrl = environment.apiUrl;
   }
 
-  public httpListPacientes(login: string) {
+  public httpListPacientes(id: string) {
     return this.http.get(
-      `${this.apiUrl}api/usuarios/${login}`, {}
+      `${this.apiUrl}api/usuarios/id/${id}`, {}
     );
   }
   
+  public ObterCadastros(tipo: string) {
+    return this.http.get(
+      `${this.apiUrl}api/usuarios/tipo/${tipo}`, {}
+    );
+  }
+
+
   public CasdatroUsuario(form: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}public/cadastro`, form);
   }
 
+
+  public EditarUsuario(form: any, id: string ): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}api/usuarios/editar/${id}`, form.usuario);
+  }
 
 
 }

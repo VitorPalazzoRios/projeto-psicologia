@@ -21,7 +21,8 @@ export class LoginComponent {
   onSubmit(): void {
     this.authService.login(this.loginData.username, this.loginData.password).subscribe({
         next: (data) => {
-            this.router.navigate(['/listagem-pacientes']);
+            console.log(data);
+            this.router.navigate(['/listagem-pacientes', data.tipo]);
         },
         error: (error) => {
             console.error('Erro no login', error);

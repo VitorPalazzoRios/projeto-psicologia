@@ -5,6 +5,15 @@
             <h3>Ficha de cadastro:</h3>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label for="nomeCompleto">Pessoa:</label>
+            <select [(ngModel)]="tipoPessoa" (change)="onPessoaChange()" class="form-select" aria-label="Default select example">
+                <option value="Fisica" selected>Física</option>
+                <option value="Juridica">Jurídica</option>
+              </select>
+        </div>
+    </div>
     <form [formGroup]="profileForm" (ngSubmit)="submit()">
         <div formGroupName="usuario">
     <div class="row">
@@ -14,19 +23,28 @@
         </div>
     </div>
     
-<div class="row">
-    <div class="col-md-12">
-        <label for="nomeCompleto">Pessoa:</label>
-        <select class="form-select" aria-label="Default select example">
-            <option value="1">Fisica</option>
-            <option value="2">Juridica</option>
-          </select>
-    </div>
-</div>
-<div class="row">
+<div class="row" *ngIf="mostraCpf">
     <div class="col-md-12">
         <label for="nomeCompleto">CPF:</label>
         <input type="text" class="camposInput" name="cpf" formControlName="cpf">
+    </div>
+</div>
+<div class="row" *ngIf="mostraCnpj">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CNPJ:</label>
+        <input type="text" class="camposInput" name="cnpj" formControlName="cnpj">
+    </div>
+</div>
+<div class="row" *ngIf="mostraCRM">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CRM:</label>
+        <input type="text" class="camposInput" name="CRM" formControlName="CRM">
+    </div>
+</div>
+<div class="row" *ngIf="mostraCRP">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CRP:</label>
+        <input type="text" class="camposInput" name="CRP" formControlName="CRP">
     </div>
 </div>
 <div class="row">
@@ -39,6 +57,13 @@
     <div class="col-md-12">
         <label for="nomeCompleto">E-mail:</label>
         <input type="text" class="camposInput" name="email" formControlName="email">
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">CEP:</label>
+        <input type="text" class="camposInput" name="cep" formControlName="cep" (blur)="buscarCep()" />
     </div>
 </div>
 <div class="row">
@@ -59,6 +84,19 @@
         <input type="text" class="camposInput" name="bairro" formControlName="bairro">
     </div>
 </div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Número:</label>
+        <input type="number" class="camposInput" name="bairro" formControlName="bairro">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="nomeCompleto">Complemento:</label>
+        <input type="text" class="camposInput" name="complemento" formControlName="complemento">
+    </div>
+</div>
+
 <div class="row">
     <div class="col-md-12">
         <label for="nomeCompleto">Estado:</label>
@@ -96,18 +134,6 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <label for="nomeCompleto">CEP:</label>
-        <input type="text" class="camposInput" name="cep" formControlName="cep">
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <label for="nomeCompleto">Complemento:</label>
-        <input type="text" class="camposInput" name="complemento" formControlName="complemento">
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
         <label for="nomeCompleto">Data de nascimento:</label>
         <input type="date" class="camposInput" name="data_nascimento" formControlName="data_nascimento">
     </div>
@@ -130,7 +156,7 @@
         <input type="text" class="camposInput" name="profissao" formControlName="profissao">
     </div>
 </div>
-@if(parametro){
+@if(mostrarStatus){
 <div class="row">
     <div class="col-md-12">
         <label for="nomeCompleto">Status:</label>
